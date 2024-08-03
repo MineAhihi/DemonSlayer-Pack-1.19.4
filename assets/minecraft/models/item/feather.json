@@ -1,0 +1,25 @@
+{
+    "parent": "item/generated",
+    "textures": { "layer0": "item/feather" },
+    "display": {
+      "head": {
+        "rotation": [0, 0, 45],
+        "translation": [-1, 13, 7],
+        "scale": [1, 1, 1]
+      }
+    },
+    "overrides": [
+      { "predicate": {"custom_model_data": 15}, "model": "item/toffy/gems/toffy_redgem"},
+          { "predicate": {"custom_model_data": 16}, "model": "item/toffy/gems/toffy_orangegem"},
+          { "predicate": {"custom_model_data": 17}, "model": "item/toffy/gems/toffy_whitegem"},
+          { "predicate": {"custom_model_data": 18}, "model": "item/toffy/gems/toffy_purplegem"},
+          { "predicate": {"custom_model_data": 19}, "model": "item/toffy/gems/toffy_yellowgem"},
+          { "predicate": {"custom_model_data": 20}, "model": "item/toffy/gems/toffy_browngem"},
+          { "predicate": {"custom_model_data": 21}, "model": "item/toffy/gems/toffy_greengem"},
+          { "predicate": {"custom_model_data": 22}, "model": "item/toffy/gems/toffy_cyangem"},
+          { "predicate": {"custom_model_data": 23}, "model": "item/toffy/gems/toffy_bluegem"},
+          { "predicate": {"custom_model_data": 24}, "model": "item/toffy/gems/toffy_blackgem"},
+      { "predicate": { "custom_model_data": 25 }, "model": "item/feather" }
+    ]
+  }
+  

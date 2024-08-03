@@ -1,0 +1,7 @@
+{
+	"credit": "22960 / 845701XHTZ",
+	"parent": "minecraft:item/generated",
+	"textures": {
+		"layer1": "lunardragonset:armor/lunar_dragon_leggings_icon"
+	}
+}

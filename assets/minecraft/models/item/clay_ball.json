@@ -1,0 +1,1 @@
+{"parent":"minecraft:item/generated","textures":{"layer0":"minecraft:item/clay_ball"},"overrides":[{"predicate":{"custom_model_data":1},"model":"hsur:custom/nothing"},{"predicate":{"custom_model_data":2},"model":"item/clay_ball"}]}

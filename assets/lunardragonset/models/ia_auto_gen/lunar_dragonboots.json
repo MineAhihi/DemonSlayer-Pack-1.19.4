@@ -1,0 +1,7 @@
+{
+	"credit": "Made with Blockbench",
+	"parent": "minecraft:item/generated",
+	"textures": {
+		"layer1": "lunardragonset:armor/lunar_dragon_boots_icon"
+	}
+}
