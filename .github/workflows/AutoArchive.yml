@@ -1,0 +1,22 @@
+# This is a basic workflow to help you get started with Actions
+name: Create Archive
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Archive Release
+      uses: thedoctor0/zip-release@main
+      with:
+        type: 'zip'
+        filename: 'DemonSlayer.zip'
+        exclusions: '*.git* /*node_modules/* .editorconfig'
+        
+    - name: Update release
+      uses: IsaacShelton/update-existing-release@v1.2.0
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        release: DemonSlayerPack
+        replace: true
+        files: ./DemonSlayer.zip
