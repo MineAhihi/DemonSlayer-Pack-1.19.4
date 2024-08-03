@@ -9,6 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
+    
     - name: Archive Release
       uses: thedoctor0/zip-release@main
       with:
@@ -16,10 +17,9 @@ jobs:
         filename: 'DemonSlayer.zip'
         exclusions: '*.git* /*node_modules/* .editorconfig'
         
-    - name: Update release
-      uses: IsaacShelton/update-existing-release@v1.3.4
+    - name: Create or Update Release
+      uses: softprops/action-gh-release@v1
       with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-        release: DemonSlayerPack
-        replace: true
-        files: ./DemonSlayer.zip
+        files: 'DemonSlayer.zip'
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
