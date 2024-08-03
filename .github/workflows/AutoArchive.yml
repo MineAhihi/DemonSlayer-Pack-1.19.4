@@ -20,6 +20,7 @@ jobs:
     - name: Create or Update Release
       uses: softprops/action-gh-release@v1
       with:
+        tag_name: 'DemonSlayerPack'
         files: 'DemonSlayer.zip'
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
