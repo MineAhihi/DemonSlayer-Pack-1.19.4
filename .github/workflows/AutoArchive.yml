@@ -1,11 +1,15 @@
 # This is a basic workflow to help you get started with Actions
 name: Create Archive
-on: [push]
+on: 
+  push:
+  workflow_dispatch:
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
+    
     - name: Archive Release
       uses: thedoctor0/zip-release@main
       with:
@@ -13,10 +17,10 @@ jobs:
         filename: 'DemonSlayer.zip'
         exclusions: '*.git* /*node_modules/* .editorconfig'
         
-    - name: Update release
-      uses: IsaacShelton/update-existing-release@v1.2.0
+    - name: Create or Update Release
+      uses: softprops/action-gh-release@v1
       with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-        release: DemonSlayerPack
-        replace: true
-        files: ./DemonSlayer.zip
+        tag_name: 'DemonSlayerPack'
+        files: 'DemonSlayer.zip'
+      env:
+        GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
